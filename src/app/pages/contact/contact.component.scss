@@ -1,0 +1,256 @@
+.contact {
+    .contact-hero {
+        padding: 6rem 0 4rem;
+        background: linear-gradient(135deg, #FFF5F7 0%, #FFFFFF 50%, #FFF9E6 100%);
+        text-align: center;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: #333;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .lead {
+            font-size: 1.3rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+
+    .contact-content {
+        padding: 6rem 0;
+        background: white;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+
+            @media (max-width: 968px) {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+    }
+
+    .contact-info {
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #D4AF37;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .info-text {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .info-items {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+
+            .info-icon {
+                width: 50px;
+                height: 50px;
+                background: linear-gradient(135deg, #D4AF37, #E8C574);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                flex-shrink: 0;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                color: #333;
+                margin-bottom: 0.3rem;
+                font-weight: 600;
+            }
+
+            p {
+                color: #666;
+                font-size: 0.95rem;
+            }
+        }
+
+        .social-section {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+
+            h3 {
+                font-size: 1.2rem;
+                color: #333;
+                margin-bottom: 1rem;
+                font-weight: 600;
+            }
+
+            .social-links {
+                display: flex;
+                gap: 1rem;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    padding: 0.75rem 1.5rem;
+                    background: linear-gradient(135deg, #FFF5F7, #FFFFFF);
+                    border: 2px solid rgba(212, 175, 55, 0.2);
+                    border-radius: 50px;
+                    color: #D4AF37;
+                    text-decoration: none;
+                    font-weight: 500;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background: linear-gradient(135deg, #D4AF37, #E8C574);
+                        color: white;
+                        border-color: #D4AF37;
+                        transform: translateY(-2px);
+                        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+                    }
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-form-wrapper {
+        background: linear-gradient(135deg, #FFF9E6, #FFF5F7);
+        padding: 3rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+
+        @media (max-width: 768px) {
+            padding: 2rem;
+        }
+    }
+
+    .contact-form {
+        .form-group {
+            margin-bottom: 1.5rem;
+
+            label {
+                display: block;
+                color: #333;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+                font-size: 0.95rem;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 1rem;
+                border: 2px solid rgba(212, 175, 55, 0.2);
+                border-radius: 12px;
+                font-size: 1rem;
+                font-family: inherit;
+                transition: all 0.3s ease;
+                background: white;
+
+                &:focus {
+                    outline: none;
+                    border-color: #D4AF37;
+                    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+                }
+
+                &::placeholder {
+                    color: #999;
+                }
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 120px;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            padding: 1.2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #D4AF37, #E8C574);
+            color: white;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+
+            &:hover:not(:disabled) {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+            }
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+        }
+
+        .success-message {
+            margin-top: 1.5rem;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, #D4AF37, #E8C574);
+            border-radius: 12px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 500;
+            animation: slideIn 0.3s ease;
+
+            svg {
+                width: 24px;
+                height: 24px;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

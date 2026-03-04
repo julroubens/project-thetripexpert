@@ -1,0 +1,73 @@
+<div class="home">
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Luxury, seamless, stress-free travel — worldwide.</h1>
+            <p class="hero-subtitle">We plan unforgettable group & individual trips worldwide. Experience travel the way
+                it should be: effortless, elegant, and extraordinary.</p>
+
+            <div class="hero-actions">
+                <a href="https://traveljoy.com/webforms/XGQjp2a18nVBC5zfUrxTd1NB/forms/fYxffGmKRya9LABN5VJp9XDP/link"
+                    target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    Get a Custom Quote
+                </a>
+                <a href="https://tairrawheeler.inteletravel.com/booktravel.cfm?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+                    target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    Browse & Book Travel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-badges">
+        <div class="container">
+            <div class="badges-grid">
+                <div class="badge" *ngFor="let badge of trustBadges">
+                    <div class="badge-icon" [attr.data-icon]="badge.icon">
+                        <svg *ngIf="badge.icon === 'personalized'" width="48" height="48" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <svg *ngIf="badge.icon === 'secure'" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <svg *ngIf="badge.icon === 'response'" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3>{{ badge.title }}</h3>
+                    <p>{{ badge.description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinations">
+        <div class="container">
+            <h2 class="section-title">Discover Your Next Adventure</h2>
+            <p class="section-subtitle">Explore our handpicked luxury destinations around the world</p>
+
+            <div class="destinations-grid">
+                <div class="destination-card" *ngFor="let destination of destinations">
+                    <div class="destination-image">
+                        <img [src]="destination.image" [alt]="destination.name" loading="lazy">
+                        <div class="destination-overlay">
+                            <h3>{{ destination.name }}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
