@@ -21,6 +21,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
@@ -34,5 +35,16 @@ jobs:
           role-to-assume: arn:aws:iam::089674142413:role/github-deploy-thetripexpertco
           aws-region: us-east-1
 
+      - name: Verify build output
+        run: |
+          test -f dist/thetripexpert/browser/index.html || {
+            echo "index.html not found"
+            find dist -maxdepth 4 -name index.html
+            exit 1
+          }
+
       - name: Deploy to S3
-        run: aws s3 sync dist/ s3://thetripexpertco.com/browser/ \ s3://thetripexpertco.com/ \ --delete
+        run: |
+          aws s3 sync dist/thetripexpert/browser/ \
+            s3://thetripexpertco.com/ \
+            --delete
