@@ -35,4 +35,4 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy to S3
-        run: aws s3 sync dist/ s3://thetripexpertco.com/bwoser/ \ s3://thetripexpertco.com/ \ --delete
+        run: aws s3 sync dist/ s3://thetripexpertco.com/browser/ \ s3://thetripexpertco.com/ \ --delete
